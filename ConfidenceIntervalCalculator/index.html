@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- For responsiveness on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- For title of the webpage in the browser tab -->
+    <title>Confidence Interval Calculator for Proportions</title>
+    
+    <!-- For external link of styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- For all the content inside a container div -->
+    <div class="container">
+
+        <!-- For header section of the page -->
+        <header class="header">
+
+            <!-- For contents of the header -->
+            <div class="header-content">
+
+                <!-- For chart icon in the header -->
+                <div class="calculator-icon">📊</div>
+
+                <!-- For main heading/title of the tool -->
+                <h1>Confidence Interval Calculator for Proportions</h1>
+            </div>
+        </header>
+
+        <!-- For main content of the page -->
+        <div class="main-content">
+
+            <!-- For card layout to group essential inputs -->
+            <div class="card essential-inputs">
+
+                <!-- For header section inside the card -->
+                <div class="card-header">
+
+                    <!-- For checkmark icon -->
+                    <span class="check-icon">✓</span>
+
+                    <!-- For section of Essential Inputs -->
+                    <h2>Essential Inputs</h2>
+                </div>
+                
+                <!-- For input related to number of successes -->
+                <div class="input-group">
+
+                    <!-- For placeholder for number of successes -->
+                    <label for="successes">1. Number of successes (x)</label>
+
+                    <!-- For numeric input field for successes -->
+                    <input type="number" id="successes" placeholder="Enter number of successes" min="0">
+
+                    <!-- For displaying any validation error for successes -->
+                    <div class="error-message" id="successes-error"></div>
+                </div>
+
+                <!-- For input related to sample size -->
+                <div class="input-group">
+
+                    <!-- For placeholder input for sample size -->
+                    <label for="sampleSize">2. Sample size (n)</label>
+
+                    <!-- For numeric input field for sample size -->
+                    <input type="number" id="sampleSize" placeholder="Enter sample size" min="1">
+
+                    <!-- For displaying any validation error for sample size -->
+                    <div class="error-message" id="sampleSize-error"></div>
+                </div>
+
+                <!-- For grouping the input related to confidence level -->
+                <div class="input-group">
+
+                    <!-- For labeling the input for confidence level -->
+                    <label for="confidenceLevel">3. Confidence level</label>
+
+                    <!-- For dropdown selection of confidence levels -->
+                    <select id="confidenceLevel">
+                        <!-- For selecting 90% confidence -->
+                        <option value="90">90%</option>
+
+                        <!-- For selecting 95% confidence as default -->
+                        <option value="95" selected>95%</option>
+
+                        <!-- For selecting 99% confidence -->
+                        <option value="99">99%</option>
+
+                        <!-- For allowing user to input custom confidence -->
+                        <option value="custom">Custom</option>
+                    </select>
+
+                    <!-- For numeric input for custom confidence level -->
+                    <input type="number" id="customConfidence" placeholder="Enter custom confidence level" 
+                            min="0" max="100" step="0.1">
+
+                    <!-- For displaying any validation error for confidence level -->
+                    <div class="error-message" id="confidence-error"></div>
+                </div>
+            </div>
+
+            <!-- For card showing formulas used in the calculator -->
+            <div class="card formula-info">
+
+                <!-- For displaying the card header for formulas -->
+                <div class="card-header">
+
+                    <!-- For showing an info icon -->
+                    <span class="info-icon">ℹ️</span>
+
+                    <!-- For labeling this section for formulas -->
+                    <h3>Formula Used</h3>
+                </div>
+
+                <!-- For displaying the actual formulas -->
+                <div class="formula-content">
+                    <!-- For showing formula to calculate sample proportion -->
+                    <p><strong>Sample proportion:</strong> p̂ = x/n</p>
+
+                    <!-- For showing formula to calculate standard error -->
+                    <p><strong>Standard error:</strong> SE = √(p̂(1-p̂)/n)</p>
+
+                    <!-- For showing formula for confidence interval -->
+                    <p><strong>Confidence interval:</strong> p̂ ± z × SE</p>
+                </div>
+            </div>
+
+            <!-- For card displaying z-scores for reference -->
+            <div class="card z-scores">
+
+                <!-- For labeling the section of z-scores -->
+                <h3>Z-scores for Common Confidence Levels</h3>
+
+                <!-- For listing the z-scores -->
+                <div class="z-score-list">
+                    <p>• 90% → 1.645</p>
+                    <p>• 95% → 1.96</p>
+                    <p>• 99% → 2.576</p>
+                </div>
+            </div>
+
+            <!-- For calculator-like input buttons -->
+            <div class="card calculator-buttons-card">
+
+                <!-- For header for calculator section -->
+                <div class="card-header">
+                    <span class="calculator-icon">🧮</span>
+                    <h3>Calculator Pad</h3>
+                </div>
+
+                <!-- For creating a grid of calculator buttons -->
+                <div class="calculator-grid">
+                    <button class="calc-button" data-value="7">7</button>
+                    <button class="calc-button" data-value="8">8</button>
+                    <button class="calc-button" data-value="9">9</button>
+                    <button class="calc-button control-button" data-action="up">⬆️</button>
+                    
+                    <button class="calc-button" data-value="4">4</button>
+                    <button class="calc-button" data-value="5">5</button>
+                    <button class="calc-button" data-value="6">6</button>
+                    <button class="calc-button control-button" data-action="down">⬇️</button>
+
+                    <button class="calc-button" data-value="1">1</button>
+                    <button class="calc-button" data-value="2">2</button>
+                    <button class="calc-button" data-value="3">3</button>
+                    <button class="calc-button clear-button" data-action="clear">C</button>
+                    
+                    <button class="calc-button zero-button" data-value="0">0</button>
+                    <button class="calc-button decimal-button" data-value=".">.</button>
+                </div>
+            </div>
+
+            <!-- For card placeholder shown before any calculation -->
+            <div class="card placeholder-card" id="placeholderCard">
+                <div class="placeholder-content">
+                    <div class="calculator-placeholder">📊</div>
+                    <p>Enter your data above to calculate the confidence interval</p>
+                </div>
+            </div>
+            
+            <!-- For detailed step-by-step solution -->
+            <div class="card solution-steps" id="solutionCard">
+
+                <!-- For card header showing steps label -->
+                <div class="card-header">
+                    <span class="steps-icon">📋</span>
+                    <h2>Step-by-Step Solution</h2>
+                </div>
+                
+                <!-- For Step 1 explanation -->
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Calculate Sample Proportion (p̂)</h4>
+                        <div class="step-formula" id="step1Formula">p̂ = x/n = -/- = -</div>
+                        <p class="step-explanation">Divide number of successes by sample size</p>
+                    </div>
+                </div>
+                
+                <!-- For Step 2 explanation -->
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Find Z-score for Confidence Level</h4>
+                        <div class="step-formula" id="step2Formula">z = - for -% confidence level</div>
+                        <p class="step-explanation">Look up critical value from standard normal distribution</p>
+                    </div>
+                </div>
+                
+                <!-- For Step 3 explanation -->
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Calculate Standard Error (SE)</h4>
+                        <div class="step-formula" id="step3Formula">SE = √(p̂(1-p̂)/n) = √(-×-/-) = -</div>
+                        <p class="step-explanation">Standard error measures variability of sample proportion</p>
+                    </div>
+                </div>
+                
+                <!-- For Step 4 explanation -->
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Calculate Margin of Error (ME)</h4>
+                        <div class="step-formula" id="step4Formula">ME = z × SE = - × - = ±-</div>
+                        <p class="step-explanation">Margin of error determines interval width</p>
+                    </div>
+                </div>
+                
+                <!-- For Step 5 explanation -->
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Construct Confidence Interval</h4>
+                        <div class="step-formula" id="step5Formula">CI = p̂ ± ME = - ± - = [-, -]</div>
+                        <p class="step-explanation">Final interval bounded between 0 and 1</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- For wrapping the final results section -->
+            <div class="results-section">
+
+                <!-- For card showing final results -->
+                <div class="card results-card" id="resultsCard">
+
+                    <!-- For results card header -->
+                    <div class="card-header">
+                        <span class="check-icon">✓</span>
+                        <h2>Results</h2>
+                    </div>
+                    
+                    <!-- For displaying the sample proportion -->
+                    <div class="result-item">
+                        <h3>Sample Proportion</h3>
+                        <div class="result-value primary" id="sampleProportion">-</div>
+                    </div>
+                    
+                    <!-- For displaying the margin of error -->
+                    <div class="result-item">
+                        <h3>Margin of Error</h3>
+                        <div class="result-value secondary" id="marginOfError">-</div>
+                    </div>
+                    
+                    <!-- For displaying the confidence interval -->
+                    <div class="result-item">
+                        <h3 id="confidenceIntervalTitle">95% Confidence Interval</h3>
+                        <div class="result-value success" id="confidenceInterval">-</div>
+                        <div class="result-value-percent" id="confidenceIntervalPercent">-</div>
+                    </div>
+                    
+                    <!-- For additional calculated details -->
+                    <div class="result-item details">
+                        <h3>Additional Details</h3>
+                        <div class="details-content">
+                            <p>Z-score: <span id="zScore">-</span></p>
+                            <p>Standard Error: <span id="standardError">-</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- For footer section with usage instructions -->
+        <footer class="usage-notes">
+            <h3>Usage Notes</h3>
+            <div class="notes-content">
+                <p>• This calculator uses the normal approximation method for confidence intervals</p>
+                <p>• Results are automatically updated as you type</p>
+                <p>• Both decimal and percentage formats are provided for easy interpretation</p>
+                <p>• The confidence interval is bounded between 0 and 1 (0% and 100%)</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- For external link of javascript file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,717 @@
+/* Reset margin/padding/box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body font and background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Main container styling */
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+  backdrop-filter: blur(10px) saturate(180%); 
+  -webkit-backdrop-filter: blur(10px) saturate(180%); 
+  border: 1px solid rgba(209, 213, 219, 0.3); 
+}
+
+/* Header background and text */
+.header {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+/* Header flex layout */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Calculator icon size */
+.calculator-icon {
+  font-size: 2.5rem;
+}
+
+/* Header title style */
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Main content grid */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto; 
+  gap: 40px;
+  padding: 40px;
+}
+
+/* Card basic style */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e5e9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Card header flex */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Check icon style */
+.check-icon {
+  background: #10b981;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Info icon style */
+.info-icon {
+  background: #3b82f6;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* Card headings style */
+.card h2,
+.card h3 {
+  margin: 0;
+  color: #1f2937;
+}
+
+/* Essential inputs section */
+.essential-inputs {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border-left: 4px solid #10b981;
+}
+
+/* Input group spacing */
+.input-group {
+  margin-bottom: 20px;
+}
+
+/* Input labels */
+.input-group label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 24px;
+}
+
+/* Inputs and selects style */
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+/* Input focus style */
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Input error style */
+.input-group input.error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+/* Error message style */
+.error-message {
+  color: #ef4444;
+  font-size: 15px;
+  margin-top: 5px;
+  display: none;
+}
+
+/* Show error message */
+.error-message.show {
+  display: block;
+}
+
+/* Formula info section */
+.formula-info {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-left: 4px solid #3b82f6;
+  height: 550px;
+}
+
+/* Paragraphs in formula content */
+.formula-content p {
+  margin-top: 28px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  color: black;
+  letter-spacing: .5px;
+}
+
+/* Card header h3 size */
+.card-header h3 {
+  font-size: 28px;
+}
+
+/* Z-scores h3 size */
+.card .z-scores h3 {
+  font-size: 28px;
+}
+
+/* Strong text in formula content */
+.formula-content strong {
+  color: #1e40af;
+}
+
+
+/* Z-scores container style */
+.z-scores {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border-left: 4px solid #6b7280;
+  height: 550px;
+}
+
+/* Z-scores heading style */
+.z-scores h3 {
+  font-size: 2.3rem; 
+  margin-bottom: 20px; 
+}
+
+/* Z-score list paragraphs */
+.z-score-list p {
+  margin-bottom: 15px;
+  margin-top: 50px;
+  font-size: 30px;
+  color: #4b5563;
+  letter-spacing: 1.5px;
+}
+
+/* Calculator buttons card layout */
+.calculator-buttons-card {
+  grid-column: 1 / 2; 
+  grid-row: 2 / 3;
+  background: linear-gradient(135deg, #f0f8ff 0%, #e0f2fe 100%);
+  border-left: 4px solid #06b6d4;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Calculator buttons card header border */
+.calculator-buttons-card .card-header {
+  border-bottom: 2px solid #e0f2fe;
+}
+
+/* Calculator buttons grid layout */
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 0.5fr; 
+  gap: 10px;
+  padding-top: 10px;
+}
+
+/* Calculator button basic style */
+.calc-button {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Calculator button hover effect */
+.calc-button:hover {
+  background-color: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+/* Calculator button active effect */
+.calc-button:active {
+  background-color: #d8dee7;
+  transform: translateY(0);
+}
+
+/* Clear button style */
+.clear-button {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Clear button hover effect */
+.clear-button:hover {
+  background-color: #dc2626;
+}
+
+/* Control button style */
+.control-button {
+  background-color: #3b82f6; 
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Control button hover effect */
+.control-button:hover {
+  background-color: #2563eb;
+}
+
+/* Zero button spans two columns */
+.zero-button {
+  grid-column: span 2; 
+}
+
+/* Solution steps container */
+.solution-steps {
+  grid-column: 1 / 3; 
+  grid-row: 3 / 4;    
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left: 4px solid #f59e0b;
+  margin-bottom: 0; 
+}
+
+/* Steps icon style */
+.steps-icon {
+  background: #f59e0b;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px; 
+}
+
+/* Single step item layout */
+.step-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+}
+
+/* Step number style */
+.step-number {
+  background: #f59e0b;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* Step content container */
+.step-content {
+  flex: 1;
+}
+
+/* Step content heading */
+.step-content h4 {
+  margin: 0 0 8px 0;
+  color: #374151;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Step formula box */
+.step-formula {
+  background: #f8fafc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 25px;
+  color: #1e40af;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 8px;
+  overflow-x: auto;
+}
+
+/* Step explanation text */
+.step-explanation {
+  margin: 0;
+  font-size: 20px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Results section container */
+.results-section {
+  grid-column: 3 / 4; 
+  grid-row: 3 / 4;    
+  display: flex; 
+  flex-direction: column;
+}
+
+/* Results card style */
+.results-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-left: 4px solid #22c55e;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0; 
+}
+
+/* Individual result item */
+.result-item {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 75px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Result item heading */
+.result-item h3 {
+  font-size: 23px;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+/* Result value text */
+.result-value {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* Primary result value color */
+.result-value.primary {
+  color: #3b82f6;
+}
+
+/* Secondary result value color */
+.result-value.secondary {
+  color: #f59e0b;
+}
+
+/* Success result value color */
+.result-value.success {
+  color: #10b981;
+}
+
+/* Percent style for result value */
+.result-value-percent {
+  font-size: 18px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Result item with details style */
+.result-item.details {
+  background: #f9fafb;
+}
+
+/* Details content paragraph */
+.details-content p {
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #6b7280;
+}
+
+/* Details content span */
+.details-content span {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Placeholder card container */
+.placeholder-card {
+  grid-column: 2 / 4; 
+  grid-row: 2 / 3;    
+  display: none; 
+  background: #f9fafb;
+  border: 2px dashed #d1d5db;
+  text-align: center;
+  padding: 60px 30px;
+  width: 100%; 
+  margin-bottom: 0;
+  align-items: center; 
+  justify-content: center; 
+  flex-direction: column; 
+}
+
+/* Placeholder text style */
+.placeholder-content {
+  color: #6b7280;
+}
+
+/* Calculator icon in placeholder */
+.calculator-placeholder {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+
+/* Placeholder paragraph */
+.placeholder-content p {
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.5; 
+}
+
+/* Usage notes section */
+.usage-notes {
+  background: #f8fafc;
+  padding: 30px 40px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Usage notes heading */
+.usage-notes h3 {
+  margin-bottom: 15px;
+  color: #1f2937;
+  font-size: 28px;
+}
+
+/* Paragraphs in notes */
+.notes-content p {
+  margin-bottom: 8px;
+  font-size: 24px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Medium screen responsiveness */
+@media (max-width: 992px) {
+  .main-content {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto auto auto;
+  }
+
+  .essential-inputs {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+  }
+
+  .formula-info {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+  }
+
+  .z-scores {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+  }
+
+  .calculator-buttons-card {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+  }
+
+  .placeholder-card {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+  }
+
+  .solution-steps {
+      grid-column: 1 / 3;
+      grid-row: 4 / 5;
+  }
+
+  .results-section {
+      grid-column: 1 / 3;
+      grid-row: 5 / 6;
+  }
+
+  .header h1 {
+      font-size: 2rem;
+  }
+
+  .header-content {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .card {
+      padding: 20px;
+  }
+
+  .usage-notes {
+      padding: 20px;
+  }
+
+  .z-scores h3 {
+      font-size: 2rem;
+  }
+}
+
+/* Small screen responsiveness */
+@media (max-width: 600px) {
+  body {
+      padding: 10px;
+  }
+
+  .container {
+      max-width: 100%;
+      margin: 0;
+      border-radius: 0;
+  }
+
+  .header {
+      padding: 20px;
+  }
+
+  .header h1 {
+      font-size: 1.8rem;
+  }
+
+  .main-content {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 20px;
+      padding: 20px;
+  }
+
+  .essential-inputs,
+  .formula-info,
+  .z-scores,
+  .calculator-buttons-card,
+  .placeholder-card,
+  .results-section,
+  .solution-steps {
+      grid-column: auto;
+      grid-row: auto;
+      height: auto;
+      margin-bottom: 0;
+  }
+
+  .formula-content p,
+  .z-score-list p,
+  .step-formula,
+  .step-explanation,
+  .result-item h3,
+  .result-value,
+  .result-value-percent,
+  .details-content p,
+  .notes-content p {
+      font-size: 1rem;
+  }
+
+  .step-content h4 {
+      font-size: 1.1rem;
+  }
+
+  .card-header h2, .card-header h3 {
+      font-size: 1.3rem;
+  }
+
+  .z-scores h3 {
+      font-size: 2rem;
+  }
+
+  .calculator-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+  }
+
+  .zero-button {
+      grid-column: span 3;
+  }
+
+  .calc-button {
+      padding: 12px;
+      font-size: 1.5rem;
+  }
+
+  .control-button {
+      font-size: 1.2rem;
+  }
+
+  .placeholder-card {
+      padding: 40px 15px;
+  }
+
+  .calculator-placeholder {
+      font-size: 2.5rem;
+  }
+
+  .placeholder-content p {
+      font-size: 5rem;
+  }
+
+  .usage-notes {
+      padding: 20px;
+  }
+
+  .usage-notes h3 {
+      font-size: 1.5rem;
+  }
+}
