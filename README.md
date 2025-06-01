@@ -147,22 +147,21 @@ This Confidence Interval Calculator for Proportions is a web-based statistical t
 
 ## 📁 Project Structure
 Confidence_Interval_Calculator-Proportions-/
-├── index.html                 # Main application file
-├── css/
+├── index.html                 # Main page 
+|
+├── Styles/
 │   ├── style.css             # Main stylesheet
-│   ├── calculator.css        # Calculator-specific styles
-│   └── responsive.css        # Mobile responsiveness
-├── js/
-│   ├── main.js               # Core application logic
-│   ├── calculator.js         # Calculation functions
-│   ├── validation.js         # Input validation
-│   └── ui.js                 # User interface handlers
+│   └── style.css        # Mobile responsiveness
+|
+├── Functionality/
+│   ├── script.js             # Core application logic
+│   ├── script.js             # Calculation functions
+│   ├── script.js             # Input validation
+│   └── script.js             # User interface handlers
+|
 ├── assets/
-│   ├── images/               # UI icons and graphics
-│   └── fonts/                # Custom fonts (if any)
-├── docs/
-│   ├── formulas.md           # Mathematical documentation
-│   └── examples.md           # Usage examples
+│   └── fonts.google.com      # Custom fonts (if any)
+|
 └── README.md                 # Project documentation
 
 
