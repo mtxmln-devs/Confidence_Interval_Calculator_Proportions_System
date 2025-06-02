@@ -221,17 +221,17 @@ If you encounter any issues or have questions:
 - 📧 **Contact**: Reach out to the development team
 - 📚 **Documentation**: Review the mathematical documentation
 
- 🔄 Updates
+## 🔄 Updates
 Stay updated with the latest features and improvements:
 - ⭐ Star the repository for notifications
 - 👀 Watch for new releases
 - 📱 Follow development progress
 
-🎓 Educational Use
+## 🎓 Educational Use
 This calculator is perfect for:
 - Statistics courses and homework
 - Research projects and thesis work
 - Professional data analysis
 - Learning confidence interval concepts
 
-**Note**: This calculator uses the normal approximation method. For small sample sizes or extreme proportions, consider using exact methods or consulting with a statistician.
+## **Note**: This calculator uses the normal approximation method. For small sample sizes or extreme proportions, consider using exact methods or consulting with a statistician.
