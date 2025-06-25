@@ -146,6 +146,7 @@ This Confidence Interval Calculator for Proportions is a web-based statistical t
    
 
 ## 📁 Project Structure
+```bash
 Confidence_Interval_Calculator-Proportions-/
 ├── index.html                 # Main page 
 |
@@ -163,7 +164,7 @@ Confidence_Interval_Calculator-Proportions-/
 │   └── fonts.google.com      # Custom fonts (if any)
 |
 └── README.md                 # Project documentation
-
+```
 
 ## 📖 Usage Instructions
 🔢 Basic Usage
