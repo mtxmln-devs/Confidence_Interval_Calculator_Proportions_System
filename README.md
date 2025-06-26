@@ -1,4 +1,4 @@
-# Confidence_Interval_Calculator-Proportions-
+# Confidence_Interval_Calculator_Proportions_System
 Find out the truth about your "yes" or "no" data.
 
 ![image alt](https://github.com/mtxmln-devs/Confidence_Interval_Calculator-Proportions-/blob/fb87375e0a3ae1bfa5f3191f1606a8200369f306/ConfidenceIntervalCalculator/Screenshot%202025-06-01%20190855.png)
@@ -33,7 +33,6 @@ This Confidence Interval Calculator for Proportions is a web-based statistical t
 - **Learning Support**: Ideal for statistics education and research
 
 ## 🛠️ Tech Stack
-
 ### Frontend Technologies
 - **HTML5**: Semantic structure and accessibility features
 - **CSS3**: Modern styling with Flexbox/Grid layouts and gradient designs
@@ -82,77 +81,90 @@ This Confidence Interval Calculator for Proportions is a web-based statistical t
 
 #### Method 1: Direct Download
 1. **Clone the Repository**
-   bash
-   git clone https://github.com/mtxmln-devs/Confidence_Interval_Calculator-Proportions-.git
+   ```bash
+   git clone https://github.com/mtxmln-devs/Confidence_Interval_Calculator_Proportions_System.git
    cd Confidence_Interval_Calculator-Proportions-
-
+   ```
+   
 2. **Open the Application**
+   ```bash
    - Navigate to the project folder
    - Double-click `index.html` to open in your default browser
    - Or right-click and select "Open with" your preferred browser
-
+   ```
+   
 #### Method 2: Local Server Setup (Recommended)
 1. **Clone the Repository**
-   bash
-   git clone https://github.com/mtxmln-devs/Confidence_Interval_Calculator-Proportions-.git
+   ```bash
+   git clone https://github.com/mtxmln-devs/Confidence_Interval_Calculator_Proportions_System.git
    cd Confidence_Interval_Calculator-Proportions-
-
+   ```
 2. **Start a Local Server**
-   
    **Using Python:**
-   bash
+   ```bash
    # Python 3
    python -m http.server 8000
-   
    # Python 2
    python -m SimpleHTTPServer 8000
-   
+   ```
    **Using Node.js (with http-server):**
-   bash
+   ```bash
    npm install -g http-server
    http-server
+   ```
    
    **Using Live Server (VS Code Extension):**
+   ```bash
    - Install Live Server extension in VS Code
    - Right-click on `index.html` and select "Open with Live Server"
-
+   ```
+   
 3. **Access the Application**
+   ```bash
    - Open your browser and navigate to `http://localhost:8000`
-
+   ```
+   
 ### 🔧 Development Setup
 1. **Fork the Repository** (for contributors)
+   ```bash
    - Click "Fork" on the GitHub repository page
    - Clone your forked repository locally
-
+   ```
+   
 2. **Create a Development Branch**
-   bash
+   ```bash
    git checkout -b feature/your-feature-name
-  
+   ```
+   
 3. **Make Changes**
+   ```bash
    - Edit HTML, CSS, or JavaScript files as needed
    - Test calculations with known values
    - Verify responsive design on different screen sizes
-
+   ```
+   
 4. **Test the Application**
+   ```bash
    - Test with various input combinations
    - Verify mathematical accuracy
    - Check cross-browser compatibility
-
+   ```
+   
 5. **Commit and Push**
-   bash
+   ```bash
    git add .
    git commit -m "Add your descriptive commit message"
    git push origin feature/your-feature-name
-   
+   ```
 
 ## 📁 Project Structure
 ```bash
-Confidence_Interval_Calculator-Proportions-/
+Confidence_Interval_Calculator_Proportions_System/
 ├── index.html                 # Main page 
 |
 ├── Styles/
 │   ├── style.css             # Main stylesheet
-│   └── style.css        # Mobile responsiveness
+│   └── style.css             # Mobile responsiveness
 |
 ├── Functionality/
 │   ├── script.js             # Core application logic
