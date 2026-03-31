@@ -3,9 +3,18 @@ Find out the truth about your "yes" or "no" data.
 
 ![image alt](https://github.com/mtxmln-devs/Confidence_Interval_Calculator-Proportions-/blob/fb87375e0a3ae1bfa5f3191f1606a8200369f306/ConfidenceIntervalCalculator/Screenshot%202025-06-01%20190855.png)
 
-# 📊 Confidence Interval Calculator for Proportions
-A comprehensive statistical tool designed to calculate confidence intervals for population proportions with an intuitive interface and real-time calculations.
 
+
+# 📊 Confidence Interval Calculator for Proportions
+<div align="center">
+
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />  
+
+   A comprehensive statistical tool designed to calculate confidence intervals for population proportions with an intuitive interface and real-time calculations.
+
+</div>
 ## 📖 Overview
 This Confidence Interval Calculator for Proportions is a web-based statistical tool that helps students, researchers, and professionals calculate confidence intervals for population proportions using the normal approximation method. The application features a modern, user-friendly interface with real-time calculations, built-in calculator pad, and comprehensive formula references.
 
