@@ -15,6 +15,10 @@ Find out the truth about your "yes" or "no" data.
    A comprehensive statistical tool designed to calculate confidence intervals for population proportions with an intuitive interface and real-time calculations.
 
 </div>
+
+--- 
+
+
 ## 📖 Overview
 This Confidence Interval Calculator for Proportions is a web-based statistical tool that helps students, researchers, and professionals calculate confidence intervals for population proportions using the normal approximation method. The application features a modern, user-friendly interface with real-time calculations, built-in calculator pad, and comprehensive formula references.
 
